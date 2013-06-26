@@ -18,3 +18,14 @@ get '/' do
     "Your name is #{params[:first]} #{params[:last]}, you are #{params[:age]} years old."
 end
 
+get '/multiply/:x/:y' do
+  @result = params[:x].to_f * params[:y].to_f
+  #'the result is: #{result}'
+  erb :calc
+end
+
+get 'divide/:x/:y' do
+  @result = params[:x].to_f / params[:y].to_f
+  #{}"the result is: #{result}"
+  erb :calc
+end
