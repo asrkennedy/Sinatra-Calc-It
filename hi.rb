@@ -1,6 +1,5 @@
 require 'pry'
 require 'sinatra'
-
 require 'sinatra/contrib/all'
 
 get '/hi' do
@@ -15,4 +14,7 @@ get '/' do
     "hello, #{params[:first]}"
   end
 
+  get '/name/:first/:last/:age' do
+    "Your name is #{params[:first]} #{params[:last]}, you are #{params[:age]} years old."
+end
 
