@@ -1,0 +1,17 @@
+
+  <%if @result %>
+     <section>
+        <header> <h1>BMI Results</h1> </header>
+      </section>
+      <p>
+        Your BMI is <%= @result %>
+      </p>
+
+      <% end %>
+
+      <form action='/bmi_calc' method='get'>
+        Do you want to enter your details in (m)etric or (i)mperial?: <input type='text' name='measurement'>
+        Weight: <input type='decimal' name='weight'>
+        Height: <input type='decimal' name='height'>
+        <button> calculate!</button>
+      </form>

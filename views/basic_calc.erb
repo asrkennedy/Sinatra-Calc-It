@@ -1,0 +1,18 @@
+
+      <%if @result %>
+      <section>
+        <header> <h1>Basic Calculator</h1> </header>
+      </section>
+      <p>
+        the result of <%=@first%> <%=@operator%> <%=@second%> is <%= @result %>
+      </p>
+
+      <% end %>
+
+      <form action='/basic_calc' method='get'>
+        first: <input type='decimal' name='first'>
+        operator: <input type='text' name='operator'>
+        second: <input type='decimal' name='second'>
+        <button> calculate!</button>
+      </form>
+

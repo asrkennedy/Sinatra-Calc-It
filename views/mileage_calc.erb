@@ -1,0 +1,17 @@
+  <%  unless @hours.nil? and @cost_trip.nil?  %>
+      <section>
+        <header> <h1>Mileage Results</h1> </header>
+      </section>
+      <p>
+       It will take you <%=@hours%> hours at a cost of <%=@cost_trip%>.
+      </p>
+
+      <% end %>
+
+      <form action='/mileage_calc' method='get'>
+        Distance: <input type='decimal' name='distance'>
+        MPG: <input type='number' name='mpg'>
+        Fuel Price per Gallon: <input type='decimal' name='cost'>
+        Speed: <input type='number' name='speed'>
+        <button> Calculate!</button>
+      </form>

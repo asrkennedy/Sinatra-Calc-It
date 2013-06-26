@@ -1,0 +1,16 @@
+  <%if @result %>
+      <section>
+        <header> <h1>Mortgage Results</h1> </header>
+      </section>
+      <p>
+        Your monthly mortgage payment is <%= @result %>
+      </p>
+
+      <% end %>
+
+      <form action='/mortgage_calc' method='get'>
+        Enter your principal: <input type='decimal' name='p'>
+        Enter your annual interest rate: <input type='decimal' name='i'>
+        Enter your number of payments: <input type='number' name='n'>
+        <button> Calculate!</button>
+      </form>
