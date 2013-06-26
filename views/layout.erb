@@ -3,12 +3,20 @@
   <head>
     <meta charset='utf-8'>
     <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="/css/fonts/fonts.css" />
     <link rel='stylesheet' href='/style.css'>
     </head
 
     <body>
+      <div class='page'>
+
       <header>
-        <h1>My awesome calculator</h1>
+        <div class='h1'>
+        <h1>Random Calculator</h1>
+      </dic>
+        <%= yield %>
+        <div class='container'>
+
         <nav>
           <ul>
             <li> <a href='/basic_calc'>Basic Calculator</a></li>
@@ -17,11 +25,15 @@
             <li> <a href='/mileage_calc'>Mileage Calculator</a></li>
           </ul>
         </nav>
+    </div>
 
       </header>
-      <%= yield %>
+
+
+
+    </div>
       <footer>
-        <p>sub navigation goes here...</p>
+        <p><a class="footer" href="http://fuckyeahwhimsy.tumblr.com/">&copy; Fuck whimsy</a></p>
       </footer>
     </body>
 </html>
